@@ -292,7 +292,7 @@ int users_port_release(
         close(rp->fd);
         rp->fd = -1;
         rp->released = 1;
-        rp->reacquire_time = time(NULL);
+        rp->reacquire_time = time(NULL) + DEFAULT_REACQUIRE_TIMEOUT;
         return -errno;
       }
       return -ENOTCONN;
