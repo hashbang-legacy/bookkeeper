@@ -127,6 +127,7 @@ static int users_add(
   rp->uid = p->pw_uid;
   rp->fd = -1;
   rp->dont_reacquire = 0;
+  rp->reacquire_time = 0;
   rp->port = config.port_offset + p->pw_uid;
   /* Dont allow overflow */
   if ((int)rp->port < (int)config.port_offset) {
