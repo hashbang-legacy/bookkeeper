@@ -266,7 +266,10 @@ int users_port_request(
 
       if (rp->released) {
         rp->fd = users_port_bind(port, 0);
-        rp->released = 0;
+        if (rp->fd >= 0) {
+          rp->released = 0;
+          rp->reacquire_time = 0;
+        }
         return -errno;
       }
       return -EADDRINUSE;
