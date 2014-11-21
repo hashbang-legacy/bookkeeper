@@ -71,12 +71,12 @@ static int users_port_bind(
   }
 
 end:
-  free(ai);
+  freeaddrinfo(ai);
   return fd;
 
 fail:
   if (ai)
-    free(ai);
+    freeaddrinfo(ai);
   if (fd >= 0)
     close(fd);
   return -1;
