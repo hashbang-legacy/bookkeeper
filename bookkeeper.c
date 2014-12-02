@@ -49,7 +49,7 @@ static void print_help(
 "  -u  --user                STRING    User and group to transiton to\n"
 "  -f  --sockpath            STRING    Path of the socket file to create for client communication.\n"
 "                                      default: %s"
-"\n\n"
+"\n\n",
 DEFAULT_SOCKPATH);
 }
 
