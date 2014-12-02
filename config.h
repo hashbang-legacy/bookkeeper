@@ -2,7 +2,7 @@
 #define _CONFIG_H
 
 struct config {
-  int system_user_threshold;
+  unsigned int system_user_threshold;
   int port_offset;
   char *user;
   char *sockfile;
