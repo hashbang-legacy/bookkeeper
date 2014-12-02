@@ -1,5 +1,5 @@
 #ifndef _CONFIG_H
-#define CONFIG_H
+#define _CONFIG_H
 
 struct config {
   int system_user_threshold;
