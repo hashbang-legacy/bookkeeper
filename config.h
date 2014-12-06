@@ -1,8 +1,8 @@
 #ifndef _CONFIG_H
-#define CONFIG_H
+#define _CONFIG_H
 
 struct config {
-  int system_user_threshold;
+  unsigned int system_user_threshold;
   int port_offset;
   char *user;
   char *sockfile;

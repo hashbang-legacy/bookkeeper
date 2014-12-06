@@ -1,4 +1,6 @@
-#define _GNU_SOURCE
+#define _POSIX_C_SOURCE 200809L
+#define _XOPEN_SOURCE 700
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
@@ -10,6 +12,7 @@
 #include <syslog.h>
 
 #include <sys/types.h>
+#include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/resource.h>
 #include <sys/inotify.h>
@@ -48,7 +51,7 @@ static void print_help(
 "  -u  --user                STRING    User and group to transiton to\n"
 "  -f  --sockpath            STRING    Path of the socket file to create for client communication.\n"
 "                                      default: %s"
-"\n\n"
+"\n\n",
 DEFAULT_SOCKPATH);
 }
 
